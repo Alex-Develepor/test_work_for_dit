@@ -1,6 +1,6 @@
 from rest_framework.routers import DefaultRouter
 
-from .views import MeetingRoomView, ReservationMeetingRoomView, LogViewSet
+from .views import LogViewSet, MeetingRoomView, ReservationMeetingRoomView
 
 router = DefaultRouter()
 

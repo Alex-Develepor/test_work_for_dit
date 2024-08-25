@@ -1,6 +1,7 @@
-from rest_framework import serializers
 from djoser.serializers import UserSerializer
-from .models import MeetingRoom, ReservationRoom, User, LogForMeetingRoom
+from rest_framework import serializers
+
+from .models import LogForMeetingRoom, MeetingRoom, ReservationRoom, User
 
 
 class MeetingRoomSerializer(serializers.ModelSerializer):

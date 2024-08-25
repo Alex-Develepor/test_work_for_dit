@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import MeetingRoom, ReservationRoom, LogForMeetingRoom
+
+from .models import LogForMeetingRoom, MeetingRoom, ReservationRoom
 
 admin.site.register(MeetingRoom)
 admin.site.register(ReservationRoom)

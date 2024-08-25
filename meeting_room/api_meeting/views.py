@@ -1,13 +1,16 @@
-from rest_framework import viewsets
+from datetime import datetime as dt
 from http import HTTPStatus
+
+from drf_yasg.utils import no_body, swagger_auto_schema
+from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from drf_yasg.utils import no_body, swagger_auto_schema
-from datetime import datetime as dt
+
 from .create_report import create_report
-from .models import MeetingRoom, ReservationRoom, LogForMeetingRoom, User
-from .serializers import MeetingRoomSerializer, GetReservationRoomSerializer, CreateReservationRoomSerializer, \
-    GetBookingSerializers, LogSerializer
+from .models import LogForMeetingRoom, MeetingRoom, ReservationRoom, User
+from .serializers import (CreateReservationRoomSerializer,
+                          GetBookingSerializers, GetReservationRoomSerializer,
+                          LogSerializer, MeetingRoomSerializer)
 
 
 class MeetingRoomView(viewsets.ModelViewSet):
